@@ -1,0 +1,223 @@
+// ==============
+// Global imports
+// ==============
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+@import "components/header";
+@import "components/footer";
+
+
+.cover {
+  margin-bottom:15%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main {
+  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.article {
+  margin-top: 3em;
+}
+
+.section {
+  margin-top: 3em;
+}
+
+.credits {
+  color:$main-text;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  & span {
+    font-weight: bold;
+  }
+  &.date {
+    margin-top:1em;
+    font-size:1.1em;
+    font-weight:300;
+  }
+}
+
+p  {
+    &.first{
+    margin-top: 3.5em;
+    &::first-letter {
+    float: left;
+    margin: 0 20px 0 0;
+    font-size: 52px;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 1;
+    }
+  }
+    & span {
+      background: rgba(123,152,173,0.3);
+      padding: 1px;
+    }
+    & span.itallic {
+      background: none;
+      font-style: italic;
+    }
+}
+
+
+
+
+
+.new-section {
+  margin-top: 5%;
+}
+
+
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.mobile {
+  display: none;
+  @media #{$brk-spnarrow} {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+  @media #{$brk-spnarrow} {
+    display: none;
+  }
+}
+
+h1 {
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snippet {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+  text-transform: uppercase;
+}
+
+figure.snippet * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+figure.snippet img {
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+figure.snippet figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  padding: 30px 10px 30px 0;
+  background-color: rgba(211, 185, 58, 0.65);
+}
+
+figure.snippet h3,
+figure.snippet .links {
+  width: 100%;
+  position: absolute;
+  margin: 5px 0;
+  padding: 0;
+}
+
+figure.snippet h3 {
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  bottom: 50%;
+  @media #{$brk-spnarrow} {
+    line-height: 1em;
+    font-size: 1.1em;
+  }
+}
+
+figure.snippet .links {
+  top: 50%;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+figure.snippet .links a {
+  display: inline-block;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  opacity: 0;
+  list-style: none;
+}
+
+figure.snippet a {
+  padding: 0px 0px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+figure.snippet a:hover {
+  color: #383e47;
+}
+
+figure.snippet:hover img,
+figure.snippet.hover img {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  opacity: 0.2;
+  @media #{$brk-spnarrow} {
+    filter: alpha(opacity=100);
+    -webkit-opacity: 1;
+    opacity: 1;
+  }
+}
+
+figure.snippet:hover figcaption,
+figure.snippet.hover figcaption {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+figure.snippet:hover a,
+figure.snippet.hover a {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}

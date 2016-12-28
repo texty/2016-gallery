@@ -1,0 +1,69 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: $main-serif;
+    font-size: 100%;
+    color: $main-text;
+    width: 100%;
+    /*footer height plus padding*/
+    margin-bottom: 200px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:link {
+        text-decoration: none;
+    }
+    &:hover {
+        color: #FAA61A;
+    }
+    &.dotted {
+    /*for links*/
+    color: #4b444d;
+    border-bottom: 2px dotted #cccccc; }
+}
+
+
+h1 {
+  @include text(12em, 1em, bold);
+  margin-top: 10%;
+}
+
+h2 {
+  @include text(2em, 2em, bold);
+  margin-top: 0px;
+  & span {
+    @include text(1.2em, 2em, bold);
+    background-color: rgba(211, 185, 58, 0.7);
+    padding: 5px;
+  }
+}
+
+h3 {
+  text-align: center;
+  @include text(1.5em, 2.2em, 700);
+  margin-bottom: 3em;
+  margin-top: 0px;
+}
+
+h4 {
+  @include text(1.5em, 2.2em, 300);
+  & span {
+    line-height: 2em;
+    background-color: rgba(211, 185, 58, 0.7);
+    padding: 5px;
+  }
+}
+
+p {
+    @include text(1.3em,1.3em, 300);
+    margin-bottom: 10px;
+    &.art-title{
+      margin-top: 1em;
+      @include text(1.6em,1.3em, bold);
+    }
+}
