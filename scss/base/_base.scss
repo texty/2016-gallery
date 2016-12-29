@@ -29,7 +29,7 @@ a {
 
 
 h1 {
-  @include text(12em, 1em, bold);
+  @include text(10em, 1em, bold);
   margin-top: 10%;
 }
 
@@ -45,9 +45,12 @@ h2 {
 
 h3 {
   text-align: center;
-  @include text(1.5em, 2.2em, 700);
+  @include text(1.5em, 1em, 700);
   margin-bottom: 3em;
   margin-top: 0px;
+  @media #{$brk-narrow} {
+    display: block;
+  }
 }
 
 h4 {

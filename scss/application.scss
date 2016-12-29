@@ -12,10 +12,6 @@
   margin-bottom:15%;
 }
 
-h1 {
-  text-align: center;
-}
-
 .main {
   margin-bottom: 5%;
   padding-left: 5%;
@@ -28,20 +24,6 @@ h1 {
 
 .section {
   margin-top: 3em;
-}
-
-.credits {
-  color:$main-text;
-  font-size: 1.3em;
-  line-height: 1.5em;
-  & span {
-    font-weight: bold;
-  }
-  &.date {
-    margin-top:1em;
-    font-size:1.1em;
-    font-weight:300;
-  }
 }
 
 p  {
@@ -67,9 +49,6 @@ p  {
 }
 
 
-
-
-
 .new-section {
   margin-top: 5%;
 }
@@ -78,6 +57,13 @@ p  {
 .no-padding {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.tablet {
+  display: none;
+  @media #{$brk-narrow} {
+    display: block;
+  }
 }
 
 
@@ -96,7 +82,8 @@ p  {
 }
 
 h1 {
-  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
   font-weight: bold;
 }
 
@@ -109,7 +96,7 @@ h2 {
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 figure.snippet {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   float: left;
   overflow: hidden;
@@ -117,7 +104,7 @@ figure.snippet {
   margin-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   -webkit-perspective: 50em;
   perspective: 50em;
   text-transform: uppercase;
@@ -166,6 +153,7 @@ figure.snippet h3 {
   }
 }
 
+
 figure.snippet .links {
   top: 50%;
   font-size: 0.7em;
@@ -179,6 +167,10 @@ figure.snippet .links a {
   transform: translateY(40px);
   opacity: 0;
   list-style: none;
+}
+
+figure.snippet .links p {
+  text-transform: none;
 }
 
 figure.snippet a {
