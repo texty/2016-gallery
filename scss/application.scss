@@ -22,9 +22,9 @@
   margin-top: 3em;
 }
 
-.section {
-  margin-top: 3em;
-}
+// .section {
+//   margin-top: 3em;
+// }
 
 p  {
     &.first{
@@ -101,7 +101,8 @@ figure.snippet {
   float: left;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 7px;
   color: #ffffff;
   text-align: center;
   font-size: 14px;

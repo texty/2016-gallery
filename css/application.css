@@ -47,8 +47,7 @@ h3 {
   font-size: 1.5em;
   line-height: 1em;
   font-weight: 700;
-  margin-bottom: 3em;
-  margin-top: 0px; }
+  padding-top: 5px; }
   @media (max-width: 768px) {
     h3 {
       display: block; } }
@@ -159,9 +158,6 @@ p {
 .article {
   margin-top: 3em; }
 
-.section {
-  margin-top: 3em; }
-
 p.first {
   margin-top: 3.5em; }
   p.first::first-letter {
@@ -218,7 +214,8 @@ figure.snippet {
   float: left;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 7px;
   color: #ffffff;
   text-align: center;
   font-size: 14px;
